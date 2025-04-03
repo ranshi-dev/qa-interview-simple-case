@@ -18,7 +18,7 @@ export class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('localhost:8080/login');
+    await this.page.goto('/login');
   }
 
   

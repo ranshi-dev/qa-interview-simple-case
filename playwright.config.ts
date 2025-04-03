@@ -10,10 +10,13 @@ export default defineConfig({
     {
       name: 'chromium',
       testDir: './tests/',
+      fullyParallel: true,
+
       use: {
         ...devices['Desktop Chrome'],
         // Use "database" with existing accounts
         storageState: setupFile,
+        baseURL: 'http://localhost:8080'
       },
       dependencies: ['setup'],
     },
